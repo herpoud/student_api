@@ -1,0 +1,67 @@
+Структура проекта:
+
+student-volunteer-api
+├── src/main/  
+│   ├── java/
+│   │   └── org.example.student_volunteer_restapi/
+│   │       ├── controller/ # контроллеры
+│   │       │   ├── AdminController.java    # Контроллер админа (доступен админу)
+│   │       │   ├── AuthController.java     # Контроллер аутентификации (доступен всем)
+│   │       │   └── UserController.java     # Контроллер пользователя (доступен пользователю)
+│   │       │  
+│   │       ├── dto/ # DTO - (Data Transfer Object)
+│   │       │   ├── bid/
+│   │       │   │   ├── PatchBidDto.java   
+│   │       │   │   ├── RequestBidDto.java
+│   │       │   │   └── ResponseBidDto.java
+│   │       │   ├── schedule/
+│   │       │   │   ├── RequestScheduleDto.java
+│   │       │   │   └── ResponseScheduleDto.java
+│   │       │   ├── token/
+│   │       │   │   └── ResponseTokenDto.java
+│   │       │   └── user/
+│   │       │       ├── LoginUserDto.java
+│   │       │       ├── PatchUserDto.java
+│   │       │       ├── RequestUserDto.java
+│   │       │       └── ResponseUserDto.java
+│   │       │
+│   │       ├── 3. exception/   # Исключения и их обработчики
+│   │       │   ├── BadRequestException.java
+│   │       │   ├── BadRequestListException.java
+│   │       │   ├── RestErrorHandle.java            # Обработчик исключений
+│   │       │   └── NotFoundException.java
+│   │       │
+│   │       ├── 4. model/   # Сущности
+│   │       │   ├── mapper/     # Мапперы (интерфейсы)
+|   |       |   |   ├── ScheduleMapper.java
+|   |       |   |   ├── UserMapper.java    
+|   |       |   |   └── BidMapper.java     
+│   │       │   ├── Bid.java        # Заявка
+│   │       │   ├── User.java       #  Пользователь
+│   │       │   ├── Role.java       # Роль
+│   │       │   └── Schedule.java   # Расписание заявки
+│   │       │
+│   │       ├── 5. repository/  # Репозитории сущностей (интерфейсы)
+│   │       │   ├── BidRepository.java
+│   │       │   ├── RoleRepository.java
+│   │       │   └── UserRepository.java
+│   │       │
+│   │       ├── 6. security/    # Безопасность
+│   │       │   ├── utils/          # Модули общего назначения
+│   │       │   │   └── TokenUtils.java         	# Генерация токена
+│   │       │   ├── CustomAuthentication.java   	# Класс для аутентификации пользователя
+│   │       │   ├── CustomAccessDeniedHandler.java  # Обработчик исключения вызываемого при недостатка прав пользователя
+│   │       │   ├── SecurityConfig.java         	# Конфигурационный класс безопасности
+│   │       │   └── TokenRequestFilter.java     	# Фильтр проверки токена
+│   │       │  
+│   │       └── 7. service/     # Сервисы
+│   │           ├── UserService.java 
+│   │           ├── RoleService.java   
+│   │           ├── CustomUserDetailsService.java   # Сервис для получения данных авторизованного пользователя
+│   │           └── BidService.java  
+│   │  
+│   └── resources/  
+│       └── application.yml # Настройки приложения   
+│  
+├── build.gradle    # Зависимости Gradle  
+└── README.md       # Описание проекта  

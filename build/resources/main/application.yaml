@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: student_volunteer_restapi
+  datasource:
+    url: jdbc:postgresql://localhost:5432/student_volunteer_rest_api_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false

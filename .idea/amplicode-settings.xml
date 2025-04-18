@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CrudOperationsStateConfig">
+    <option name="configPaths">
+      <map>
+        <entry key="dto" value="org.example.student_volunteer_restapi.model.Bid" />
+        <entry key="repository" value="org.example.student_volunteer_restapi.repository.BidRepository" />
+        <entry key="serviceProxy" value="org.example.student_volunteer_restapi.service.BidService" />
+      </map>
+    </option>
+  </component>
+  <component name="DelegationContextManager">
+    <lastDelegates>
+      <entry key="org.example.student_volunteer_restapi.repository.BidRepository" value="org.example.student_volunteer_restapi.service.BidService" />
+      <entry key="org.example.student_volunteer_restapi.service.BidService" value="org.example.student_volunteer_restapi.controller.AdminController" />
+      <entry key="org.example.student_volunteer_restapi.repository.UserRepository" value="org.example.student_volunteer_restapi.service.UserService" />
+      <entry key="org.example.student_volunteer_restapi.service.UserService" value="org.example.student_volunteer_restapi.controller.AuthController" />
+    </lastDelegates>
+  </component>
+  <component name="SpringProjectLocalState">
+    <option name="firstOpen" value="false" />
+  </component>
+</project>
